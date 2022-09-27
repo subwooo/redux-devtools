@@ -841,7 +841,7 @@ importers:
       redux: ^4.2.0
       redux-persist: ^6.0.0
       rimraf: ^3.0.2
-      socketcluster-client: ^16.1.1
+      socketcluster-client: ^17.1.0
       style-loader: ^3.3.1
       styled-components: ^5.3.5
       ts-jest: ^27.1.5
@@ -875,7 +875,7 @@ importers:
       react-redux: 8.0.2_ps4ywwwjjeajezffxxirqk36qa
       redux: 4.2.0
       redux-persist: 6.0.0_react@18.2.0+redux@4.2.0
-      socketcluster-client: 16.1.1
+      socketcluster-client: 17.1.0
     devDependencies:
       '@babel/cli': 7.18.10_@babel+core@7.18.10
       '@babel/core': 7.18.10
@@ -1027,7 +1027,7 @@ importers:
       react-is: ^18.2.0
       rimraf: ^3.0.2
       semver: ^7.3.7
-      socketcluster-client: ^16.1.1
+      socketcluster-client: ^17.1.0
       socketcluster-server: ^16.2.1
       sqlite3: ^5.0.11
       styled-components: ^5.3.5
@@ -1084,7 +1084,7 @@ importers:
       jest: 27.5.1
       ncp: 2.0.0
       rimraf: 3.0.2
-      socketcluster-client: 16.1.1
+      socketcluster-client: 17.1.0
       supertest: 6.2.4
       ts-jest: 27.1.5_mqaoisgizytgigbr3gbjwvnjie
       typescript: 4.7.4
@@ -1746,7 +1746,7 @@ importers:
       redux: ^4.2.0
       rimraf: ^3.0.2
       rn-host-detect: ^1.2.0
-      socketcluster-client: ^16.1.1
+      socketcluster-client: ^17.1.0
       typescript: ~4.7.4
     dependencies:
       '@babel/runtime': 7.18.9
@@ -1755,7 +1755,7 @@ importers:
       jsan: 3.1.14
       querystring: 0.2.1
       rn-host-detect: 1.2.0
-      socketcluster-client: 16.1.1
+      socketcluster-client: 17.1.0
     devDependencies:
       '@babel/cli': 7.18.10_@babel+core@7.18.10
       '@babel/core': 7.18.10
@@ -6025,7 +6025,7 @@ packages:
       strict-event-emitter: 0.2.4
       uuid: 8.3.2
     optionalDependencies:
-      msw: 0.44.2_typescript@4.7.4
+      msw: 0.47.3_typescript@4.7.4
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -6047,6 +6047,23 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /@mswjs/interceptors/0.17.5:
+    resolution: {integrity: sha512-/uZkyPUZMRExZs+DZQVnc+uoDwLfs1gFNvcRY5S3Gu78U+uhovaSEUW3tuyld1e7Oke5Qphfseb8v66V+H1zWQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@open-draft/until': 1.0.3
+      '@types/debug': 4.1.7
+      '@xmldom/xmldom': 0.7.5
+      debug: 4.3.4
+      headers-polyfill: 3.1.0
+      outvariant: 1.3.0
+      strict-event-emitter: 0.2.4
+      web-encoding: 1.1.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+    optional: true
 
   /@nicolo-ribaudo/chokidar-2/2.1.8-no-fsevents.3:
     resolution: {integrity: sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==}
@@ -13720,6 +13737,11 @@ packages:
     resolution: {integrity: sha512-JoLCAdCEab58+2/yEmSnOlficyHFpIl0XJqwu3l+Unkm1gXpFUYsThz6Yha3D6tNhocWkCPfyW0YVIGWFqTi7w==}
     dev: false
 
+  /headers-polyfill/3.1.0:
+    resolution: {integrity: sha512-AVwgTAzeGpF7kwUCMc9HbAoCKFcHGEfmWkaI8g0jprrkh9VPRaofIsfV7Lw8UuR9pi4Rk7IIjJce8l0C+jSJNA==}
+    dev: false
+    optional: true
+
   /hex-rgba/1.0.2:
     resolution: {integrity: sha512-MKla68wFGv+i7zU3Q4giWN74f+zWdkuf2Tk21fISV7aw55r8dH/noBbH5JsVlM4Z2WRTYCEmSxsoZ1QR/o68jg==}
     dev: false
@@ -16652,6 +16674,44 @@ packages:
       - supports-color
     dev: false
 
+  /msw/0.47.3_typescript@4.7.4:
+    resolution: {integrity: sha512-X3w/1fi29mEqoCajgFV59hrmns+mdD/FPegYMRwW7CK0vi//yX9NVy07/XspdBm6W1TNtb8Giv79SmS2BAb0Wg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      typescript: '>= 4.2.x <= 4.8.x'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@mswjs/cookies': 0.2.2
+      '@mswjs/interceptors': 0.17.5
+      '@open-draft/until': 1.0.3
+      '@types/cookie': 0.4.1
+      '@types/js-levenshtein': 1.1.1
+      chalk: 4.1.1
+      chokidar: 3.5.3
+      cookie: 0.4.2
+      graphql: 16.5.0
+      headers-polyfill: 3.1.0
+      inquirer: 8.2.4
+      is-node-process: 1.0.1
+      js-levenshtein: 1.1.6
+      node-fetch: 2.6.7
+      outvariant: 1.3.0
+      path-to-regexp: 6.2.1
+      statuses: 2.0.1
+      strict-event-emitter: 0.2.4
+      type-fest: 2.19.0
+      typescript: 4.7.4
+      yargs: 17.5.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: false
+    optional: true
+
   /multicast-dns/7.2.5:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
     hasBin: true
@@ -19575,8 +19635,8 @@ packages:
       - supports-color
     dev: true
 
-  /socketcluster-client/16.1.1:
-    resolution: {integrity: sha512-Fv/O8Dnb62fDLHRfh0Vr0FLrK/IzcFCukAqZlTE3L2LkI8ZY+24GzUNvYn3NnppSfqjEjEl1bLm26guqPAqlpQ==}
+  /socketcluster-client/17.1.0:
+    resolution: {integrity: sha512-jAmjBixLVPCN6NuDGufN+8Zycvz9wQ8QXQvdqBDqkVEDfZV3Mv2mR0FGYwX6KZa0kHr3VJ2EjvUj8ZYJ2ZfyzQ==}
     dependencies:
       ag-channel: 5.0.0
       ag-request: 1.0.0
@@ -19589,7 +19649,7 @@ packages:
       stream-demux: 8.0.0
       uuid: 8.3.2
       vinyl-buffer: 1.0.1
-      ws: 7.5.8
+      ws: 8.9.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -20864,6 +20924,12 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /type-fest/2.19.0:
+    resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
+    engines: {node: '>=12.20'}
+    dev: false
+    optional: true
+
   /type-is/1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
@@ -21944,6 +22010,18 @@ packages:
       utf-8-validate:
         optional: true
     dev: true
+
+  /ws/8.9.0:
+    resolution: {integrity: sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   /x-default-browser/0.4.0:
     resolution: {integrity: sha512-7LKo7RtWfoFN/rHx1UELv/2zHGMx8MkZKDq1xENmOCTkfIqZJ0zZ26NEJX8czhnPXVcqS0ARjjfJB+eJ0/5Cvw==}
